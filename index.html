@@ -3,50 +3,111 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Ishana Venue Consultancy</title>
 
 <style>
 body {
-  font-family: Arial;
   margin: 0;
+  font-family: Arial, sans-serif;
   background: #f9f9f9;
 }
 
+/* HEADER */
 header {
-  background: purple;
+  background: linear-gradient(135deg, #6a1b9a, #8e24aa);
   color: white;
   text-align: center;
-  padding: 20px;
+  padding: 50px 20px;
 }
 
+header h1 {
+  margin: 0;
+  font-size: 32px;
+}
+
+header p {
+  max-width: 800px;
+  margin: 15px auto;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* BUTTON */
+.btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 12px 25px;
+  background: #25D366;
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: bold;
+}
+
+/* SECTION */
 section {
-  padding: 20px;
+  padding: 40px 20px;
+  max-width: 1100px;
+  margin: auto;
 }
 
 h2 {
-  color: purple;
+  text-align: center;
+  color: #6a1b9a;
 }
 
-ul {
-  background: #eee;
-  padding: 15px;
-  border-radius: 10px;
+/* SERVICES */
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
 }
 
-.contact {
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* WHY US */
+.why {
   background: #f3e5f5;
-  padding: 15px;
   border-radius: 10px;
+  padding: 20px;
 }
 
-a {
-  display: inline-block;
-  margin-top: 10px;
-  background: green;
+.why ul {
+  list-style: none;
+  padding: 0;
+}
+
+.why li {
+  margin: 10px 0;
+}
+
+/* FOOTER */
+footer {
+  background: #6a1b9a;
   color: white;
-  padding: 10px;
+  text-align: center;
+  padding: 15px;
+}
+
+/* FLOATING WHATSAPP */
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  color: white;
+  padding: 15px;
+  border-radius: 50%;
   text-decoration: none;
-  border-radius: 5px;
+  font-size: 20px;
 }
 </style>
 
@@ -54,32 +115,59 @@ a {
 
 <body>
 
+<!-- HERO -->
 <header>
   <h1>Ishana Venue Consultancy</h1>
-  <p>Your Perfect Venue, Our Expert Guidance</p>
+  <p><b>Doorstep Venue Consultation Service</b><br>
+  No need to waste time visiting multiple venues. We come to your location and help you choose the perfect venue with complete details like photos, videos, pricing, capacity, rooms, and facilities.</p>
+
+  <p><b>Just one click is enough — we will come to you!</b></p>
+
+  <a class="btn" href="https://wa.me/919148203163">Book Now on WhatsApp</a>
 </header>
 
+<!-- SERVICES -->
 <section>
-  <h2>About</h2>
-  <p>We help you find the best venues for weddings, parties and events in Bangalore.</p>
+  <h2>Our Services</h2>
+
+  <div class="services">
+    <div class="card">💍 Wedding Venues</div>
+    <div class="card">🎉 Reception Venues</div>
+    <div class="card">🎂 Birthday Party Venues</div>
+    <div class="card">🏢 Corporate Events</div>
+    <div class="card">🏛️ Banquet Halls</div>
+    <div class="card">💰 Budget-Friendly Options</div>
+  </div>
 </section>
 
-<section>
-  <h2>Services</h2>
+<!-- WHY US -->
+<section class="why">
+  <h2>Why Choose Us?</h2>
   <ul>
-    <li>Wedding Venues</li>
-    <li>Reception Venues</li>
-    <li>Birthday Party Venues</li>
-    <li>Corporate Events</li>
+    <li>✔ Doorstep Consultation</li>
+    <li>✔ Saves Your Time & Effort</li>
+    <li>✔ Multiple Venue Options</li>
+    <li>✔ Transparent Pricing</li>
+    <li>✔ Personalized Service</li>
   </ul>
 </section>
 
-<section class="contact">
-  <h2>Contact</h2>
-  <p>Phone: 9148203163</p>
-  <p>Email: moorthiy167@gmail.com</p>
-  <a href="https://wa.me/919148203163">WhatsApp Us</a>
+<!-- CONTACT -->
+<section>
+  <h2>Contact Us</h2>
+  <p style="text-align:center;">
+    📞 9148203163 <br>
+    📧 moorthiy167@gmail.com
+  </p>
 </section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 Ishana Venue Consultancy | Bangalore</p>
+</footer>
+
+<!-- WHATSAPP FLOAT -->
+<a class="whatsapp" href="https://wa.me/919148203163">💬</a>
 
 </body>
 </html>
