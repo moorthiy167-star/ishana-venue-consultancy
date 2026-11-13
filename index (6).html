@@ -1,0 +1,1012 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<meta name="description" content="Ishana Venue Consultancy: doorstep venue consultation in Bangalore for weddings, receptions, birthdays and corporate events.">
+<title>Ishana Venue Consultancy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: aubergine hero band with a venue comparison sheet beside the pitch, then a ruled how-it-works strip, services list, reasons, and a contact band. */
+:root {
+  --bg: #faf6fb;
+  --surface: #ffffff;
+  --fg: #26162f;
+  --muted: #6b5a77;
+  --line: #e8dded;
+  --soft: #f2eaf6;
+  --hero-bg: #3a1357;
+  --hero-fg: #ffffff;
+  --hero-muted: #d9c6e8;
+  --accent: #e8a317;
+  --accent-ink: #2b1b00;
+  --wa: #1c9c50;
+  --wa-ink: #ffffff;
+  --link: #5b1f86;
+  --font-display: "Fraunces", Georgia, "Times New Roman", serif;
+  --font-body: "Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #150d1d; --surface: #201529; --fg: #f4ecf9; --muted: #b8a7c8; --line: #38284a; --soft: #2a1b38;
+    --hero-bg: #240f37; --hero-fg: #ffffff; --hero-muted: #cdb9de;
+    --accent: #f0b73a; --accent-ink: #2b1b00; --wa: #2bb862; --wa-ink: #05210f; --link: #d4b0f2;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #150d1d; --surface: #201529; --fg: #f4ecf9; --muted: #b8a7c8; --line: #38284a; --soft: #2a1b38;
+  --hero-bg: #240f37; --hero-fg: #ffffff; --hero-muted: #cdb9de;
+  --accent: #f0b73a; --accent-ink: #2b1b00; --wa: #2bb862; --wa-ink: #05210f; --link: #d4b0f2;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0;
+}
+h1, h2, h3 { font-family: var(--font-display); font-weight: 700; line-height: 1.12; margin: 0; text-wrap: balance; }
+p { margin: 0; }
+a { color: var(--link); }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+
+.in {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+.eyebrow {
+  font-size: 12px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* buttons */
+.btn {
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 14px 24px; border-radius: 999px;
+  font: 700 15px/1 var(--font-body); text-decoration: none; border: 0; cursor: pointer;
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+.btn:hover { transform: translateY(-2px); }
+.btn-wa { background: var(--wa); color: var(--wa-ink); box-shadow: 0 8px 20px -8px var(--wa); }
+.btn-ghost { background: transparent; color: var(--hero-fg); box-shadow: inset 0 0 0 1.5px rgba(255,255,255,.4); }
+.btn svg { width: 20px; height: 20px; flex: none; }
+
+/* hero */
+.hero { background-color: var(--hero-bg); color: var(--hero-fg);
+  background-image: linear-gradient(105deg, rgba(34,10,52,.95) 0%, rgba(42,13,64,.88) 42%, rgba(42,13,64,.5) 100%), url("images/garden-lawn-mandap.jpg");
+  background-size: cover; background-position: center; }
+.topbar { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 22px; }
+.brand { font-family: var(--font-display); font-weight: 700; font-size: 20px; letter-spacing: .01em; }
+.brand span { color: var(--accent); }
+.topbar .loc { font-size: 13px; color: var(--hero-muted); }
+.hero-grid {
+  display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  gap: 56px; align-items: center; padding-block: 48px 72px;
+}
+.hero h1 { font-size: clamp(36px, 5.4vw, 62px); letter-spacing: -0.015em; }
+.hero h1 em { font-style: normal; color: var(--accent); }
+.hero .lede { margin-top: 22px; max-width: 54ch; color: var(--hero-muted); font-size: 17px; }
+.hero .cta { margin-top: 32px; display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+.hero .tagline { margin-top: 22px; font-weight: 600; font-size: 15px; }
+
+/* sample sheet */
+.sheet { background: var(--surface); color: var(--fg); border-radius: 14px; padding: 22px; box-shadow: 0 30px 60px -30px rgba(0,0,0,.55); min-width: 0; }
+.sheet-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+.sheet-head h2 { font-size: 20px; }
+.tag { font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; background: var(--soft); color: var(--muted); padding: 4px 10px; border-radius: 999px; }
+.tbl { overflow-x: auto; margin-top: 16px; }
+.tbl table { width: 100%; border-collapse: collapse; font-size: 14px; font-variant-numeric: tabular-nums; }
+.tbl th { text-align: left; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-weight: 700; padding: 8px 10px 8px 0; border-bottom: 1.5px solid var(--fg); white-space: nowrap; }
+.tbl td { padding: 12px 10px 12px 0; border-bottom: 1px solid var(--line); white-space: nowrap; }
+.tbl td:first-child { font-weight: 700; }
+.tbl tr.pick td { background: var(--soft); }
+.tbl tr.pick td:first-child { padding-left: 10px; }
+.sheet-foot { margin-top: 14px; font-size: 13px; color: var(--muted); }
+
+/* sections */
+section { padding-block: 72px; }
+.sec-head { max-width: 640px; }
+.sec-head h2 { font-size: clamp(28px, 3.6vw, 40px); margin-top: 10px; }
+.sec-head p { margin-top: 14px; color: var(--muted); }
+
+/* process: a true sequence, joined by a dashed route line */
+.process-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; flex-wrap: wrap; }
+.steps { --m: 68px; list-style: none; padding: 0; margin: 56px 0 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; position: relative; }
+.steps::before { content: ""; position: absolute; top: calc(var(--m) / 2); left: calc(100% / 6); right: calc(100% / 6); border-top: 2px dashed color-mix(in srgb, var(--link) 45%, transparent); }
+.step { position: relative; padding-top: calc(var(--m) / 2); min-width: 0; }
+.medal { position: absolute; z-index: 1; top: 0; left: 50%; transform: translateX(-50%); width: var(--m); height: var(--m); border-radius: 50%; background: var(--hero-bg); color: var(--accent); display: grid; place-items: center; border: 5px solid var(--bg); box-shadow: 0 12px 24px -10px rgba(58, 19, 87, .65); }
+.medal svg { width: 28px; height: 28px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.medal .num { position: absolute; top: -6px; right: -8px; width: 26px; height: 26px; border-radius: 50%; background: var(--accent); color: var(--accent-ink); font: 700 13px/26px var(--font-body); text-align: center; border: 3px solid var(--bg); box-sizing: content-box; margin: 0; padding: 0; }
+.step-card { height: 100%; background: var(--surface); border: 1px solid var(--line); border-radius: 18px; padding: calc(var(--m) / 2 + 24px) 26px 28px; text-align: center; box-shadow: 0 24px 44px -30px rgba(58, 19, 87, .5); display: flex; flex-direction: column; align-items: center; }
+.step .n { font-size: 11.5px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--link); }
+.step h3 { font-size: 24px; margin-top: 8px; }
+.step p { margin-top: 10px; color: var(--muted); font-size: 15.5px; max-width: 34ch; }
+.step .meta { margin-top: auto; padding-top: 18px; }
+.step .meta span { display: inline-block; font-size: 12.5px; font-weight: 600; padding: 6px 14px; border-radius: 999px; background: var(--soft); color: var(--fg); }
+
+/* what you receive */
+.receive { background: var(--soft); }
+.receive-grid { display: grid; grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr); gap: 56px; align-items: start; }
+.facts { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 32px; }
+.facts li { padding: 16px 0; border-bottom: 1px solid var(--line); display: flex; gap: 12px; align-items: baseline; }
+.facts b { font-weight: 700; }
+.facts span { color: var(--muted); font-size: 14px; }
+.facts .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); flex: none; transform: translateY(-1px); }
+.facts li > div { min-width: 0; }
+
+/* services */
+.svc { margin: 36px 0 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.svc li { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 22px; }
+.svc h3 { font-size: 20px; }
+.svc p { margin-top: 6px; color: var(--muted); font-size: 14.5px; }
+.svc li.budget { background: var(--hero-bg); color: var(--hero-fg); border-color: transparent; }
+.svc li.budget p { color: var(--hero-muted); }
+
+/* why */
+.why-list { margin: 36px 0 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 56px; }
+.why-list li { padding: 20px 0; border-top: 1px solid var(--line); }
+.why-list h3 { font-size: 20px; }
+.why-list p { margin-top: 6px; color: var(--muted); font-size: 15px; }
+
+/* contact */
+.contact { background: var(--hero-bg); color: var(--hero-fg); }
+.contact-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 48px; align-items: center; }
+.contact h2 { font-size: clamp(28px, 3.8vw, 44px); }
+.contact .lede { margin-top: 14px; color: var(--hero-muted); max-width: 46ch; }
+.contact .cta { margin-top: 26px; }
+.rows { display: grid; gap: 12px; min-width: 0; }
+.row { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 16px 18px; border-radius: 12px; background: rgba(255,255,255,.08); }
+.row > div { min-width: 0; }
+.row small { display: block; font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--hero-muted); font-weight: 700; }
+.row .val { font-size: 18px; font-weight: 600; overflow-wrap: anywhere; user-select: all; }
+.copy { flex: none; background: transparent; color: var(--hero-fg); border: 1.5px solid rgba(255,255,255,.4); border-radius: 999px; padding: 8px 14px; font: 600 13px var(--font-body); cursor: pointer; }
+.copy:hover { border-color: var(--accent); color: var(--accent); }
+
+footer { background: var(--hero-bg); color: var(--hero-muted); border-top: 1px solid rgba(255,255,255,.14); font-size: 14px; }
+footer .in { padding-block: 22px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; }
+
+/* floating whatsapp */
+.fab {
+  position: fixed; z-index: 20;
+  right: calc(16px + env(safe-area-inset-right, 0px));
+  bottom: calc(16px + env(safe-area-inset-bottom, 0px));
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--wa); color: var(--wa-ink); text-decoration: none;
+  padding: 13px 18px; border-radius: 999px; font: 700 14px var(--font-body);
+  box-shadow: 0 10px 24px -8px rgba(0,0,0,.5);
+}
+.fab svg { width: 20px; height: 20px; }
+
+@media (max-width: 900px) {
+  .hero-grid, .receive-grid, .contact-grid { grid-template-columns: minmax(0, 1fr); gap: 36px; }
+  .hero-grid { padding-block: 28px 56px; }
+  .hero { background-image: linear-gradient(180deg, rgba(34,10,52,.94), rgba(42,13,64,.86)), url("images/garden-lawn-mandap.jpg"); }
+  .side-photo { aspect-ratio: 16 / 9; }
+  .steps { --m: 60px; grid-template-columns: minmax(0, 1fr); gap: 20px; margin-top: 40px; }
+  .steps::before { top: calc(var(--m) / 2); bottom: calc(var(--m) / 2); left: calc(var(--m) / 2); right: auto; border-top: 0; border-left: 2px dashed color-mix(in srgb, var(--link) 45%, transparent); }
+  .step { padding: 0 0 0 calc(var(--m) + 18px); }
+  .medal { left: 0; transform: none; }
+  .step-card { padding: 22px; text-align: left; align-items: flex-start; }
+  .step .meta { padding-top: 14px; }
+  .svc { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  section { padding-block: 56px; }
+}
+@media (max-width: 560px) {
+  .svc, .why-list, .facts { grid-template-columns: minmax(0, 1fr); }
+  .topbar .loc { display: none; }
+  .fab span { display: none; }
+  .fab { padding: 14px; }
+}
+/* gallery */
+.contents { display: contents; }
+.gallery { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-top: 36px; }
+.shot { margin: 0; border-radius: 12px; overflow: hidden; background: var(--surface); border: 1px solid var(--line); min-width: 0; display: flex; flex-direction: column; }
+.shot svg, .shot img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; }
+.shot figcaption { padding: 14px 16px 16px; display: grid; gap: 2px; }
+.shot b { font-family: var(--font-display); font-size: 18px; font-weight: 700; }
+.shot span { color: var(--muted); font-size: 13.5px; }
+.shot .rm { justify-self: start; margin-top: 8px; }
+.shot img { transition: transform .5s ease; }
+.shot:hover img { transform: scale(1.03); }
+.shot { position: relative; }
+.shot .imgwrap { overflow: hidden; }
+.side-photo { display: block; width: 100%; aspect-ratio: 16 / 10; object-fit: cover; border-radius: 16px; margin-top: 28px; box-shadow: 0 24px 44px -28px rgba(58, 19, 87, .6); }
+@media (min-width: 901px) {
+  .shot.wide { grid-column: span 2; }
+  .shot.wide img { aspect-ratio: 8 / 3; }
+}
+.gallery-note { margin-top: 18px; font-size: 13.5px; color: var(--muted); max-width: 70ch; }
+
+/* enquiry form */
+.enquire { background: var(--soft); }
+.enquire-grid { display: grid; grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr); gap: 56px; align-items: start; }
+.enquire .points { margin: 24px 0 0; padding: 0; list-style: none; display: grid; gap: 12px; }
+.enquire .points li { padding-left: 22px; position: relative; color: var(--muted); font-size: 15px; }
+.enquire .points li::before { content: ""; position: absolute; left: 0; top: 9px; width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+.form { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 28px; display: grid; gap: 20px; min-width: 0; }
+.fgrid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.field { display: grid; gap: 6px; min-width: 0; align-content: start; }
+.field > label, .legend { font-size: 13px; font-weight: 700; }
+.field input, .field select, .field textarea {
+  font: inherit; color: var(--fg); background: var(--bg); border: 1.5px solid var(--line);
+  border-radius: 10px; padding: 12px 14px; width: 100%; min-width: 0;
+}
+.field textarea { resize: vertical; min-height: 92px; }
+.field input:focus-visible, .field select:focus-visible, .field textarea:focus-visible { outline: 3px solid var(--accent); outline-offset: 1px; }
+fieldset { border: 0; padding: 0; margin: 0; min-width: 0; }
+.checks { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+.chip { position: relative; display: inline-block; }
+.chip input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+.chip span { display: inline-block; padding: 9px 14px; border: 1.5px solid var(--line); border-radius: 999px; font-size: 14px; cursor: pointer; background: var(--bg); color: var(--fg); }
+.chip input:checked + span { background: var(--hero-bg); color: var(--hero-fg); border-color: transparent; }
+.chip input:focus-visible + span { outline: 3px solid var(--accent); outline-offset: 2px; }
+.sendvia { border: 1.5px solid var(--line); border-radius: 12px; padding: 16px; background: var(--bg); }
+.hint { font-size: 13px; color: var(--muted); }
+.err { background: var(--accent); color: var(--accent-ink); padding: 10px 14px; border-radius: 10px; font-weight: 600; font-size: 14px; }
+.btn-main { background: var(--hero-bg); color: var(--hero-fg); justify-content: center; width: 100%; font-size: 16px; padding: 16px 24px; }
+.btn[disabled] { opacity: .6; cursor: progress; transform: none; }
+.done h3 { font-size: 26px; }
+.done p { color: var(--muted); }
+.summary { margin: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px 20px; }
+.summary dt, .enq dt { font-size: 11px; letter-spacing: .1em; text-transform: uppercase; font-weight: 700; color: var(--muted); }
+.summary dd, .enq dd { margin: 2px 0 0; font-weight: 600; overflow-wrap: anywhere; }
+
+/* admin */
+.adminbar { background: var(--accent); color: var(--accent-ink); font-size: 14px; font-weight: 600; }
+.adminbar .in { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; padding-block: 10px; }
+.badge { display: inline-grid; place-items: center; min-width: 22px; height: 22px; padding: 0 7px; border-radius: 999px; background: var(--accent-ink); color: var(--accent); font-size: 12px; font-weight: 700; }
+.mini { font: 700 13px var(--font-body); padding: 8px 14px; border-radius: 999px; cursor: pointer; border: 1.5px solid currentColor; background: transparent; color: inherit; }
+.adminbar .mini { color: var(--accent-ink); }
+.mini:hover { opacity: .8; }
+.mini[disabled] { opacity: .5; cursor: progress; }
+.inbox { background: var(--soft); border-bottom: 1px solid var(--line); padding-block: 40px; }
+.inbox h2 { font-size: 28px; }
+.tabs { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+.tab { border: 1.5px solid var(--line); background: var(--surface); color: var(--fg); padding: 8px 14px; border-radius: 999px; font: 600 13px var(--font-body); cursor: pointer; }
+.tab[aria-pressed="true"] { background: var(--hero-bg); color: var(--hero-fg); border-color: transparent; }
+.enq-list { display: grid; gap: 14px; margin-top: 20px; }
+.enq { background: var(--surface); border: 1.5px solid var(--line); border-radius: 12px; padding: 20px; display: grid; gap: 14px; min-width: 0; }
+.enq.new { border-color: var(--accent); }
+.enq-head { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; align-items: start; }
+.enq h3 { font-size: 20px; }
+.pill { font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; padding: 5px 10px; border-radius: 999px; background: var(--soft); color: var(--muted); }
+.pill.new { background: var(--accent); color: var(--accent-ink); }
+.pill.contacted { background: var(--wa); color: var(--wa-ink); }
+.enq dl { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 12px 20px; margin: 0; }
+.enq .notes { font-size: 15px; overflow-wrap: anywhere; }
+.enq .acts { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.enq .acts a.mini { text-decoration: none; }
+.enq .chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.enq .chips span { font-size: 12.5px; padding: 4px 10px; border-radius: 999px; background: var(--soft); }
+.uploader { margin-top: 28px; padding-top: 20px; border-top: 1px solid var(--line); display: grid; gap: 10px; max-width: 560px; }
+.uploader h3 { font-size: 20px; }
+.uploader input[type="file"], .uploader input[type="text"] { font: inherit; color: var(--fg); background: var(--surface); border: 1.5px solid var(--line); border-radius: 10px; padding: 10px 12px; width: 100%; min-width: 0; }
+.toast { position: fixed; z-index: 30; left: 50%; transform: translateX(-50%); bottom: calc(84px + env(safe-area-inset-bottom, 0px)); max-width: min(92vw, 420px); background: var(--fg); color: var(--bg); padding: 12px 18px; border-radius: 12px; font-weight: 600; font-size: 14px; box-shadow: 0 12px 30px -10px rgba(0,0,0,.5); }
+
+@media (max-width: 900px) {
+  .enquire-grid { grid-template-columns: minmax(0, 1fr); gap: 32px; }
+  .gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 560px) {
+  .gallery, .fgrid { grid-template-columns: minmax(0, 1fr); }
+  .form { padding: 20px; }
+}
+@media (prefers-reduced-motion: reduce) { .btn { transition: none; } .btn:hover { transform: none; } .shot img { transition: none; } .shot:hover img { transform: none; } }
+</style>
+</head>
+<body>
+
+<div class="adminbar" id="adminbar" hidden>
+  <div class="in">
+    <span>Admin view · <span id="bar-count" class="badge">0</span> new <span id="bar-label">enquiries</span></span>
+    <button class="mini" type="button" id="inbox-toggle" aria-expanded="false" aria-controls="inbox">Open enquiries</button>
+  </div>
+</div>
+
+<section class="inbox" id="inbox" hidden>
+  <div class="in">
+    <h2>Customer enquiries</h2>
+    <p class="hint" id="inbox-note">Loading enquiries…</p>
+    <div class="tabs" id="tabs" role="group" aria-label="Filter enquiries"></div>
+    <div class="enq-list" id="enq-list"></div>
+    <div class="uploader" id="uploader" hidden>
+      <h3>Add venue photos</h3>
+      <p class="hint">Photos you upload appear first in the gallery for everyone.</p>
+      <input type="file" id="up-files" accept="image/png,image/jpeg,image/webp" multiple>
+      <input type="text" id="up-caption" placeholder="Caption, for example: Grand Banquet, Whitefield" maxlength="80">
+      <div><button class="mini" type="button" id="up-btn">Upload photos</button> <span class="hint" id="up-note"></span></div>
+    </div>
+  </div>
+</section>
+
+<header class="hero">
+  <div class="in">
+    <div class="topbar">
+      <div class="brand">Ishana <span>Venue</span> Consultancy</div>
+      <div class="loc"><a href="#enquire" style="color:inherit">Share your event details</a> · Bangalore</div>
+    </div>
+
+    <div class="hero-grid">
+      <div>
+        <p class="eyebrow" style="color: var(--accent)">Doorstep venue consultation</p>
+        <h1 style="margin-top:14px">Skip the venue tours. <em>We bring the venues to you.</em></h1>
+        <p class="lede">Visiting hall after hall eats weekends and patience. We come to your home or office and take you through shortlisted venues with photos, videos, pricing, capacity, rooms and facilities, so you can choose in one sitting.</p>
+        <div class="cta">
+          <a class="btn btn-wa" href="https://wa.me/919148203163">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2a9.9 9.9 0 0 0-8.4 15.1L2 22l5-1.6A9.9 9.9 0 1 0 12.04 2Zm5.8 14.1c-.25.7-1.45 1.35-2 1.4-.5.05-1.15.07-1.85-.12a16.7 16.7 0 0 1-6.3-3.9 7.3 7.3 0 0 1-1.6-3.5c0-1.5.8-2.2 1.1-2.5.25-.3.55-.35.75-.35h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.35 0 .55l-.35.5-.5.6c-.15.15-.3.3-.15.6.2.3.8 1.3 1.7 2.1 1.15 1 2.1 1.35 2.4 1.5.3.15.5.1.65-.1l.9-1.1c.2-.25.4-.2.65-.1l1.8.9c.25.1.4.2.5.3.05.15.05.7-.2 1.4Z"/></svg>
+            Book on WhatsApp
+          </a>
+          <a class="btn btn-ghost" href="#enquire">Share event details</a>
+        </div>
+        <p class="tagline">One message is enough. We come to you.</p>
+      </div>
+
+      <div class="sheet" aria-label="Sample venue comparison sheet">
+        <div class="sheet-head">
+          <h2>Your venue shortlist</h2>
+          <span class="tag">Sample sheet</span>
+        </div>
+        <div class="tbl">
+          <table>
+            <thead>
+              <tr><th>Venue</th><th>Guests</th><th>Rooms</th><th>Per plate</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Hall A</td><td>600</td><td>12</td><td>₹1,150</td></tr>
+              <tr class="pick"><td>Hall B</td><td>350</td><td>6</td><td>₹950</td></tr>
+              <tr><td>Hall C</td><td>900</td><td>20</td><td>₹1,400</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="sheet-foot">Every venue also comes with photos, a walkthrough video and a facilities list. Figures above are illustrative.</p>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="process">
+    <div class="in">
+      <div class="process-head">
+        <div class="sec-head">
+          <p class="eyebrow">How it works</p>
+          <h2>From one message to your venue in three steps</h2>
+          <p>No travelling from hall to hall. We handle the visits and bring the comparison to your door.</p>
+        </div>
+        <a class="btn btn-wa" href="https://wa.me/919148203163">Start on WhatsApp</a>
+      </div>
+      <ol class="steps">
+        <li class="step">
+          <div class="medal" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M4 5h16v11H10l-5 4v-4H4z"/><path d="M8.5 10.5h7"/></svg>
+            <span class="num">1</span>
+          </div>
+          <div class="step-card">
+            <span class="n">Step 1</span>
+            <h3>Message us</h3>
+            <p>Tell us the event, date, guest count and budget on WhatsApp or through the form.</p>
+            <div class="meta"><span>Takes about two minutes</span></div>
+          </div>
+        </li>
+        <li class="step">
+          <div class="medal" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+            <span class="num">2</span>
+          </div>
+          <div class="step-card">
+            <span class="n">Step 2</span>
+            <h3>We visit you</h3>
+            <p>We arrive at your home or office with a shortlist matched to your needs.</p>
+            <div class="meta"><span>At your location</span></div>
+          </div>
+        </li>
+        <li class="step">
+          <div class="medal" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l3 3 5-6"/></svg>
+            <span class="num">3</span>
+          </div>
+          <div class="step-card">
+            <span class="n">Step 3</span>
+            <h3>You compare and decide</h3>
+            <p>Go through photos, videos and prices side by side, then pick your venue.</p>
+            <div class="meta"><span>Decide in one sitting</span></div>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="receive">
+    <div class="in receive-grid">
+      <div class="sec-head">
+        <p class="eyebrow">What you get</p>
+        <h2>The full picture of every venue</h2>
+        <p>Everything you would normally travel to find out, laid out in front of you.</p>
+      </div>
+      <ul class="facts">
+        <li><i class="dot"></i><div><b>Photos</b><br><span>Halls, stages, dining areas and entrances</span></div></li>
+        <li><i class="dot"></i><div><b>Videos</b><br><span>Walkthroughs so you see the real space</span></div></li>
+        <li><i class="dot"></i><div><b>Pricing</b><br><span>Clear, transparent rates for each venue</span></div></li>
+        <li><i class="dot"></i><div><b>Capacity</b><br><span>Seating and standing numbers for your guest list</span></div></li>
+        <li><i class="dot"></i><div><b>Rooms</b><br><span>Guest and family rooms available on site</span></div></li>
+        <li><i class="dot"></i><div><b>Facilities</b><br><span>Parking, catering options, power backup and more</span></div></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="gallery-section">
+    <div class="in">
+      <div class="sec-head">
+        <p class="eyebrow">Venue gallery</p>
+        <h2>The kinds of spaces we shortlist for you</h2>
+        <p>From mandap ceremonies to boardroom launches, here is the range we work across in Bengaluru.</p>
+      </div>
+      <div class="gallery" id="gallery">
+        <div class="contents" id="gallery-up"></div>
+        <figure class="shot wide">
+          <img src="images/courtyard-dance-floor.jpg" alt="Courtyard with string lights, dance floor and florals" loading="lazy" decoding="async">
+          <figcaption><b>Courtyard reception</b><span>Open courtyards with a dance floor and festoon lighting.</span></figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="images/garden-lawn-mandap.jpg" alt="Wedding lawn with lanterns and a mandap at dusk" loading="lazy" decoding="async">
+          <figcaption><b>Garden wedding lawn</b><span>Lantern-lit lawns with a mandap stage for the ceremony.</span></figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="images/banquet-hall-floral-arch.jpg" alt="Banquet hall with chandeliers and a floral arch" loading="lazy" decoding="async">
+          <figcaption><b>Banquet hall</b><span>Air-conditioned halls with chandeliers and a floral backdrop.</span></figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="images/hillside-terrace-reception.jpg" alt="Terrace reception with round tables and a stage at sunset" loading="lazy" decoding="async">
+          <figcaption><b>Hillside terrace</b><span>Open terraces with round-table seating and a stage.</span></figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="images/ceremony-hall-chandelier.jpg" alt="Wooden-beam ceremony hall with a chandelier and aisle" loading="lazy" decoding="async">
+          <figcaption><b>Ceremony hall</b><span>Indoor halls for ceremonies with a central aisle.</span></figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="images/lawn-reception-night.jpg" alt="Night lawn reception with draped canopies and round tables" loading="lazy" decoding="async">
+          <figcaption><b>Lawn reception</b><span>Large lawns for evening receptions and big guest lists.</span></figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="images/garden-marquee-tables.jpg" alt="Marquee with long tables, trees and chandeliers" loading="lazy" decoding="async">
+          <figcaption><b>Garden marquee</b><span>Marquees with long family-style tables.</span></figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="images/grand-ballroom.jpg" alt="Ballroom with lit dance floor and banquet tables" loading="lazy" decoding="async">
+          <figcaption><b>Grand ballroom</b><span>Ballrooms with a stage, dance floor and banquet seating.</span></figcaption>
+        </figure>
+      </div>
+      <p class="gallery-note">These photos show the styles of venue we help families and companies find. Photos and videos of the exact venues on your shortlist are shared during your consultation.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="in">
+      <div class="sec-head">
+        <p class="eyebrow">Our services</p>
+        <h2>A venue for every occasion</h2>
+      </div>
+      <ul class="svc">
+        <li><h3>Wedding venues</h3><p>Halls and lawns for the main ceremony, with room for family to stay.</p></li>
+        <li><h3>Reception venues</h3><p>Stage, seating and dining set up for a large evening gathering.</p></li>
+        <li><h3>Birthday party venues</h3><p>Spaces sized for kids' parties, milestone birthdays and family celebrations.</p></li>
+        <li><h3>Corporate events</h3><p>Venues for conferences, annual days, team meets and launches.</p></li>
+        <li><h3>Banquet halls</h3><p>Air-conditioned halls for functions of many sizes and styles.</p></li>
+        <li class="budget"><h3>Budget-friendly options</h3><p>Tell us your limit and we shortlist venues that fit it.</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="in">
+      <div class="sec-head">
+        <p class="eyebrow">Why choose us</p>
+        <h2>Less travel, clearer choices</h2>
+      </div>
+      <ul class="why-list">
+        <li><h3>Doorstep consultation</h3><p>We meet you where you are, at a time that suits you.</p></li>
+        <li><h3>Saves your time and effort</h3><p>No weekends lost to traffic and back-to-back site visits.</p></li>
+        <li><h3>Multiple venue options</h3><p>Compare several venues in one conversation.</p></li>
+        <li><h3>Transparent pricing</h3><p>Rates are shown upfront so there are no surprises later.</p></li>
+        <li><h3>Personalized service</h3><p>The shortlist is built around your event, guests and budget.</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="enquire" id="enquire">
+    <div class="in enquire-grid">
+      <div class="sec-head">
+        <p class="eyebrow">Event details</p>
+        <h2>Tell us about your event</h2>
+        <p>Fill in the details once. We shortlist venues in Bengaluru that match your date, area, guest count, rooms and budget, then come to you.</p>
+        <ul class="points">
+          <li>Takes about two minutes. Only name and phone are required.</li>
+          <li>Send it on WhatsApp, to our website inbox, or both.</li>
+          <li>We reply with a shortlist and a time to visit you.</li>
+        </ul>
+        <img class="side-photo" src="images/banquet-hall-floral-arch.jpg" alt="Banquet hall with chandeliers and a floral arch" loading="lazy" decoding="async">
+      </div>
+
+      <div>
+        <form class="form" id="enq-form" novalidate>
+          <div class="fgrid">
+            <div class="field"><label for="f-name">Your name</label><input id="f-name" type="text" autocomplete="name" maxlength="80" placeholder="Full name" required></div>
+            <div class="field"><label for="f-phone">Phone / WhatsApp number</label><input id="f-phone" type="tel" inputmode="tel" autocomplete="tel" maxlength="20" placeholder="98765 43210" required></div>
+            <div class="field"><label for="f-email">Email (optional)</label><input id="f-email" type="email" autocomplete="email" maxlength="120" placeholder="you@example.com"></div>
+            <div class="field"><label for="f-type">Type of event</label>
+              <select id="f-type">
+                <option>Wedding</option><option>Reception</option><option>Birthday party</option><option>Corporate event</option><option>Engagement / Naming ceremony</option><option>Other</option>
+              </select>
+            </div>
+            <div class="field"><label for="f-date">Event date</label><input id="f-date" type="date"></div>
+            <div class="field"><label for="f-time">Time of day</label>
+              <select id="f-time"><option value="">Not decided</option><option>Morning</option><option>Afternoon</option><option>Evening</option><option>Full day</option></select>
+            </div>
+            <div class="field"><label for="f-area">Preferred area in Bengaluru</label>
+              <input id="f-area" type="text" list="areas" maxlength="60" placeholder="Start typing, e.g. Whitefield">
+              <datalist id="areas"><option value="Anywhere in Bengaluru"><option value="Whitefield"><option value="Marathahalli"><option value="Indiranagar"><option value="Koramangala"><option value="HSR Layout"><option value="Electronic City"><option value="Jayanagar"><option value="JP Nagar"><option value="Banashankari"><option value="Malleshwaram"><option value="Rajajinagar"><option value="Yeshwanthpur"><option value="Hebbal"><option value="Yelahanka"><option value="Devanahalli"><option value="KR Puram"><option value="Sarjapur Road"><option value="Bannerghatta Road"><option value="Kanakapura Road"><option value="Hosur Road"><option value="Tumkur Road"></datalist>
+            </div>
+            <div class="field"><label for="f-guests">Expected guests</label>
+              <select id="f-guests"><option value="">Not sure yet</option><option>Up to 100</option><option>100 to 250</option><option>250 to 500</option><option>500 to 1,000</option><option>More than 1,000</option></select>
+            </div>
+            <div class="field"><label for="f-budget">Venue budget</label>
+              <select id="f-budget"><option value="">Not decided</option><option>Under ₹1 lakh</option><option>₹1 to 3 lakh</option><option>₹3 to 5 lakh</option><option>₹5 to 10 lakh</option><option>Above ₹10 lakh</option></select>
+            </div>
+            <div class="field"><label for="f-rooms">Guest rooms needed</label><input id="f-rooms" type="number" min="0" max="200" inputmode="numeric" placeholder="0"></div>
+          </div>
+
+          <fieldset>
+            <div class="legend">Facilities you want</div>
+            <div class="checks">
+              <label class="chip"><input type="checkbox" name="fac" value="AC hall"><span>AC hall</span></label>
+              <label class="chip"><input type="checkbox" name="fac" value="Parking"><span>Parking</span></label>
+              <label class="chip"><input type="checkbox" name="fac" value="In-house catering"><span>In-house catering</span></label>
+              <label class="chip"><input type="checkbox" name="fac" value="Decor"><span>Decor</span></label>
+              <label class="chip"><input type="checkbox" name="fac" value="Stage"><span>Stage</span></label>
+              <label class="chip"><input type="checkbox" name="fac" value="Power backup"><span>Power backup</span></label>
+              <label class="chip"><input type="checkbox" name="fac" value="Bridal room"><span>Bridal room</span></label>
+              <label class="chip"><input type="checkbox" name="fac" value="Dining hall"><span>Dining hall</span></label>
+            </div>
+          </fieldset>
+
+          <div class="field"><label for="f-notes">Anything else we should know?</label><textarea id="f-notes" maxlength="600" placeholder="Veg or non-veg, outside catering, nearby metro, family traditions…"></textarea></div>
+
+          <fieldset class="sendvia">
+            <div class="legend">How should we receive this?</div>
+            <div class="checks">
+              <label class="chip"><input type="checkbox" id="via-wa" checked><span>WhatsApp</span></label>
+              <label class="chip" id="via-site-wrap" hidden><input type="checkbox" id="via-site" checked><span>Website inbox</span></label>
+            </div>
+            <p class="hint" id="via-note" style="margin-top:10px">Your details are filled into a WhatsApp message to Ishana Venue Consultancy. You tap send.</p>
+          </fieldset>
+
+          <div class="err" id="form-err" role="alert" hidden></div>
+          <button class="btn btn-main" type="submit" id="send-btn">Send enquiry</button>
+        </form>
+
+        <div class="form done" id="done" hidden>
+          <h3 id="done-title">Thank you</h3>
+          <p id="done-text"></p>
+          <dl class="summary" id="done-sum"></dl>
+          <div style="display:flex;flex-wrap:wrap;gap:12px;align-items:center">
+            <a class="btn btn-wa" id="wa-send" href="https://wa.me/919148203163" hidden>Send on WhatsApp</a>
+            <button class="mini" type="button" id="again">Edit details</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="in contact-grid">
+      <div>
+        <p class="eyebrow" style="color: var(--accent)">Contact us</p>
+        <h2 style="margin-top:10px">Planning an event? Start with one message.</h2>
+        <p class="lede">Send us the date and the kind of event. We will take it from there and come to you.</p>
+        <div class="cta">
+          <a class="btn btn-wa" href="https://wa.me/919148203163">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2a9.9 9.9 0 0 0-8.4 15.1L2 22l5-1.6A9.9 9.9 0 1 0 12.04 2Zm5.8 14.1c-.25.7-1.45 1.35-2 1.4-.5.05-1.15.07-1.85-.12a16.7 16.7 0 0 1-6.3-3.9 7.3 7.3 0 0 1-1.6-3.5c0-1.5.8-2.2 1.1-2.5.25-.3.55-.35.75-.35h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.35 0 .55l-.35.5-.5.6c-.15.15-.3.3-.15.6.2.3.8 1.3 1.7 2.1 1.15 1 2.1 1.35 2.4 1.5.3.15.5.1.65-.1l.9-1.1c.2-.25.4-.2.65-.1l1.8.9c.25.1.4.2.5.3.05.15.05.7-.2 1.4Z"/></svg>
+            Book on WhatsApp
+          </a>
+        </div>
+      </div>
+      <div class="rows">
+        <div class="row">
+          <div><small>Phone</small><div class="val" id="phone-val">9148203163</div></div>
+          <button class="copy" type="button" data-target="phone-val">Copy</button>
+        </div>
+        <div class="row">
+          <div><small>Email</small><div class="val" id="mail-val">moorthiy167@gmail.com</div></div>
+          <button class="copy" type="button" data-target="mail-val">Copy</button>
+        </div>
+        <div class="row">
+          <div><small>Based in</small><div class="val">Bangalore</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="in">
+    <span>© 2026 Ishana Venue Consultancy</span>
+    <span>Bangalore</span>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+<a class="fab" href="https://wa.me/919148203163" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2a9.9 9.9 0 0 0-8.4 15.1L2 22l5-1.6A9.9 9.9 0 1 0 12.04 2Zm5.8 14.1c-.25.7-1.45 1.35-2 1.4-.5.05-1.15.07-1.85-.12a16.7 16.7 0 0 1-6.3-3.9 7.3 7.3 0 0 1-1.6-3.5c0-1.5.8-2.2 1.1-2.5.25-.3.55-.35.75-.35h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.35 0 .55l-.35.5-.5.6c-.15.15-.3.3-.15.6.2.3.8 1.3 1.7 2.1 1.15 1 2.1 1.35 2.4 1.5.3.15.5.1.65-.1l.9-1.1c.2-.25.4-.2.65-.1l1.8.9c.25.1.4.2.5.3.05.15.05.7-.2 1.4Z"/></svg>
+  <span>Chat with us</span>
+</a>
+
+<script>
+document.querySelectorAll('.copy').forEach(function (btn) {
+  btn.addEventListener('click', function () {
+    var el = document.getElementById(btn.dataset.target);
+    var text = el.textContent.trim();
+    function selectIt() {
+      var r = document.createRange(); r.selectNodeContents(el);
+      var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+    }
+    function done() {
+      btn.textContent = 'Copied';
+      setTimeout(function () { btn.textContent = 'Copy'; }, 1600);
+    }
+    try {
+      navigator.clipboard.writeText(text).then(done, selectIt);
+    } catch (e) { selectIt(); }
+  });
+});
+</script>
+
+<script>
+(function () {
+  var WA = "919148203163";
+  var $ = function (id) { return document.getElementById(id); };
+  function el(tag, cls, text) {
+    var n = document.createElement(tag);
+    if (cls) n.className = cls;
+    if (text != null) n.textContent = text;
+    return n;
+  }
+  var ctx = { db: null, user: null, uid: null, assets: null, isAdmin: false, canWrite: false };
+
+  /* ---------- helpers ---------- */
+  var toastTimer;
+  function toast(msg) {
+    var t = $("toast");
+    t.textContent = msg;
+    t.hidden = false;
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function () { t.hidden = true; }, 7000);
+  }
+  function fmtDate(d) {
+    if (!d) return "";
+    var x = new Date(d + "T00:00:00");
+    return isNaN(x) ? String(d) : x.toLocaleDateString("en-IN", { day: "numeric", month: "short", year: "numeric" });
+  }
+  function fmtDateTime(iso) {
+    var x = new Date(iso);
+    return isNaN(x) ? "" : x.toLocaleString("en-IN", { day: "numeric", month: "short", hour: "numeric", minute: "2-digit" });
+  }
+  function newId() { return Date.now().toString(36) + Math.random().toString(36).slice(2, 7); }
+  function waNumber(phone) {
+    var d = String(phone || "").replace(/\D/g, "");
+    if (d.length === 10) d = "91" + d;
+    return d;
+  }
+  function copyText(text, btn) {
+    var label = btn.textContent;
+    function done() { btn.textContent = "Copied"; setTimeout(function () { btn.textContent = label; }, 1500); }
+    try { navigator.clipboard.writeText(text).then(done, function () {}); } catch (e) {}
+  }
+
+  /* ---------- enquiry form ---------- */
+  var form = $("enq-form");
+  var dateEl = $("f-date");
+  try { dateEl.min = new Date().toISOString().slice(0, 10); } catch (e) {}
+
+  function val(id) { return ($(id).value || "").trim(); }
+  function facilities() {
+    return Array.prototype.slice.call(form.querySelectorAll('input[name="fac"]:checked')).map(function (i) { return i.value; });
+  }
+  function readRecord() {
+    return {
+      id: newId(),
+      createdAt: new Date().toISOString(),
+      name: val("f-name"),
+      phone: val("f-phone"),
+      email: val("f-email"),
+      eventType: val("f-type"),
+      date: val("f-date"),
+      time: val("f-time"),
+      area: val("f-area"),
+      guests: val("f-guests"),
+      budget: val("f-budget"),
+      rooms: val("f-rooms"),
+      facilities: facilities(),
+      notes: val("f-notes")
+    };
+  }
+  function rows(r) {
+    return [
+      ["Name", r.name], ["Phone", r.phone], ["Email", r.email], ["Event", r.eventType],
+      ["Date", fmtDate(r.date)], ["Time", r.time], ["Area", r.area], ["Guests", r.guests],
+      ["Budget", r.budget], ["Rooms", r.rooms],
+      ["Facilities", (r.facilities || []).join(", ")], ["Notes", r.notes]
+    ].filter(function (p) { return p[1]; });
+  }
+  function waLink(r) {
+    var lines = ["Hello Ishana Venue Consultancy, I would like venue options for my event in Bengaluru.", ""];
+    rows(r).forEach(function (p) { lines.push(p[0] + ": " + p[1]); });
+    return "https://wa.me/" + WA + "?text=" + encodeURIComponent(lines.join("\n"));
+  }
+  function showErr(msg) { var e = $("form-err"); e.textContent = msg; e.hidden = false; }
+
+  async function saveEnquiry(r) {
+    var ref = ctx.db.doc("enquiries/" + ctx.uid);
+    var snap = await ref.get();
+    var list = snap.exists && snap.data() && Array.isArray(snap.data().requests) ? snap.data().requests.slice(-49) : [];
+    list.push(r);
+    await ref.set({ requests: list });
+  }
+
+  function showDone(r, o) {
+    $("done-title").textContent = o.saved ? "Enquiry received" : "Almost done";
+    var msg = "";
+    if (o.saved && o.wa) msg = "Your details are in our website inbox. Tap the button to also send them on WhatsApp.";
+    else if (o.saved) msg = "Your details are in our website inbox. We will contact you on " + r.phone + ".";
+    else if (o.failed) msg = "We could not reach the website inbox just now. Send your details on WhatsApp instead.";
+    else msg = "Tap the button to send your details on WhatsApp. Everything is already filled in.";
+    $("done-text").textContent = msg;
+    var sum = $("done-sum");
+    sum.replaceChildren();
+    rows(r).forEach(function (p) {
+      if (p[0] === "Notes" || p[0] === "Email") return;
+      var d = el("div"); d.appendChild(el("dt", null, p[0])); d.appendChild(el("dd", null, p[1])); sum.appendChild(d);
+    });
+    var a = $("wa-send");
+    if (o.wa) { a.href = waLink(r); a.hidden = false; } else { a.hidden = true; }
+    form.hidden = true;
+    $("done").hidden = false;
+    $("done").scrollIntoView({ block: "start" });
+  }
+
+  form.addEventListener("submit", async function (e) {
+    e.preventDefault();
+    $("form-err").hidden = true;
+    var viaWa = $("via-wa").checked;
+    var viaSite = $("via-site").checked && ctx.canWrite;
+    if (!viaWa && !viaSite) { showErr("Choose at least one way to send: WhatsApp or website inbox."); return; }
+    var r = readRecord();
+    if (!r.name) { showErr("Please enter your name."); $("f-name").focus(); return; }
+    if (r.phone.replace(/\D/g, "").length < 10) { showErr("Please enter a phone number with at least 10 digits."); $("f-phone").focus(); return; }
+    var btn = $("send-btn");
+    btn.disabled = true; btn.textContent = "Sending…";
+    var saved = false, failed = false;
+    if (viaSite) {
+      try { await saveEnquiry(r); saved = true; } catch (ex) { failed = true; }
+    }
+    btn.disabled = false; btn.textContent = "Send enquiry";
+    showDone(r, { saved: saved, failed: failed, wa: viaWa || failed });
+  });
+  $("again").addEventListener("click", function () {
+    $("done").hidden = true; form.hidden = false;
+    $("enquire").scrollIntoView({ block: "start" });
+  });
+
+  /* ---------- admin inbox ---------- */
+  var enquiries = [], statuses = {}, filter = "all";
+  var seen = {}, seenReady = false;
+  var LABEL = { "new": "New", contacted: "Contacted", closed: "Closed" };
+  function st(r) { return statuses[r.id] || "new"; }
+
+  function flatten(snap) {
+    var out = [];
+    snap.docs.forEach(function (d) {
+      var data = d.data() || {};
+      (Array.isArray(data.requests) ? data.requests : []).forEach(function (r) { if (r && r.id) out.push(r); });
+    });
+    out.sort(function (a, b) { return String(b.createdAt || "") < String(a.createdAt || "") ? -1 : 1; });
+    return out;
+  }
+  function setStatus(r, s, btn) {
+    btn.disabled = true;
+    ctx.db.doc("enquiry_status/" + r.id).set({ status: s, updatedAt: new Date().toISOString() })
+      .catch(function () { toast("Could not update the status. Try again."); })
+      .then(function () { btn.disabled = false; });
+  }
+  function card(r) {
+    var s = st(r);
+    var c = el("article", "enq" + (s === "new" ? " new" : ""));
+    var head = el("div", "enq-head");
+    var who = el("div");
+    who.appendChild(el("h3", null, r.name || "Customer"));
+    who.appendChild(el("p", "hint", "Received " + fmtDateTime(r.createdAt)));
+    head.appendChild(who);
+    head.appendChild(el("span", "pill " + s, LABEL[s] || s));
+    c.appendChild(head);
+
+    var dl = el("dl");
+    [["Event", r.eventType], ["Date", fmtDate(r.date)], ["Time", r.time], ["Area", r.area],
+     ["Guests", r.guests], ["Budget", r.budget], ["Rooms", r.rooms], ["Phone", r.phone], ["Email", r.email]]
+      .forEach(function (p) {
+        if (!p[1]) return;
+        var d = el("div"); d.appendChild(el("dt", null, p[0])); d.appendChild(el("dd", null, String(p[1]))); dl.appendChild(d);
+      });
+    c.appendChild(dl);
+
+    if (Array.isArray(r.facilities) && r.facilities.length) {
+      var ch = el("div", "chips");
+      r.facilities.forEach(function (f) { ch.appendChild(el("span", null, String(f))); });
+      c.appendChild(ch);
+    }
+    if (r.notes) c.appendChild(el("p", "notes", String(r.notes)));
+
+    var acts = el("div", "acts");
+    var num = waNumber(r.phone);
+    if (num) {
+      var a = el("a", "mini", "Reply on WhatsApp");
+      a.href = "https://wa.me/" + num; a.target = "_blank"; a.rel = "noopener";
+      acts.appendChild(a);
+    }
+    var cp = el("button", "mini", "Copy phone"); cp.type = "button";
+    cp.addEventListener("click", function () { copyText(String(r.phone || ""), cp); });
+    acts.appendChild(cp);
+    function act(label, status) {
+      var b = el("button", "mini", label); b.type = "button";
+      b.addEventListener("click", function () { setStatus(r, status, b); });
+      acts.appendChild(b);
+    }
+    if (s === "new") { act("Mark contacted", "contacted"); }
+    if (s === "contacted") { act("Close", "closed"); }
+    if (s !== "new") { act("Reopen", "new"); }
+    c.appendChild(acts);
+    return c;
+  }
+  function renderInbox() {
+    var counts = { all: enquiries.length, "new": 0, contacted: 0, closed: 0 };
+    enquiries.forEach(function (r) { counts[st(r)] = (counts[st(r)] || 0) + 1; });
+    $("bar-count").textContent = counts["new"];
+    $("bar-label").textContent = counts["new"] === 1 ? "enquiry" : "enquiries";
+    $("inbox-note").textContent = enquiries.length
+      ? enquiries.length + " enquiries in total. New ones appear here as soon as customers send them."
+      : "No enquiries yet. New ones appear here as soon as customers send them.";
+    var tabs = $("tabs");
+    tabs.replaceChildren();
+    [["all", "All"], ["new", "New"], ["contacted", "Contacted"], ["closed", "Closed"]].forEach(function (t) {
+      var b = el("button", "tab", t[1] + " (" + (counts[t[0]] || 0) + ")");
+      b.type = "button"; b.setAttribute("aria-pressed", filter === t[0] ? "true" : "false");
+      b.addEventListener("click", function () { filter = t[0]; renderInbox(); });
+      tabs.appendChild(b);
+    });
+    var box = $("enq-list");
+    box.replaceChildren();
+    enquiries.filter(function (r) { return filter === "all" || st(r) === filter; })
+      .forEach(function (r) { box.appendChild(card(r)); });
+  }
+  function startInbox() {
+    $("adminbar").hidden = false;
+    var toggle = $("inbox-toggle");
+    toggle.addEventListener("click", function () {
+      var open = $("inbox").hidden;
+      $("inbox").hidden = !open;
+      toggle.setAttribute("aria-expanded", open ? "true" : "false");
+      toggle.textContent = open ? "Hide enquiries" : "Open enquiries";
+    });
+    var loadTimer = setTimeout(function () { $("inbox-note").textContent = "Cannot reach the inbox yet. Check your connection."; }, 10000);
+    ctx.db.collection("enquiry_status").onSnapshot(function (snap) {
+      var m = {};
+      snap.docs.forEach(function (d) { var x = d.data(); if (x && x.status) m[d.id] = x.status; });
+      statuses = m; renderInbox();
+    }, function () {});
+    ctx.db.collection("enquiries").onSnapshot(function (snap) {
+      clearTimeout(loadTimer);
+      var list = flatten(snap);
+      if (!snap.metadata.fromCache) {
+        if (seenReady) {
+          list.forEach(function (r) {
+            if (!seen[r.id]) toast("New enquiry from " + String(r.name || "a customer").slice(0, 40) + " · " + String(r.eventType || "event").slice(0, 30));
+          });
+        }
+        list.forEach(function (r) { seen[r.id] = 1; });
+        seenReady = true;
+      }
+      enquiries = list; renderInbox();
+    }, function (e) { clearTimeout(loadTimer); $("inbox-note").textContent = "Cannot read the inbox (" + (e && e.code) + ")."; });
+    if (ctx.assets) startUploader();
+  }
+
+  /* ---------- gallery photos ---------- */
+  function renderGallery(snap) {
+    var box = $("gallery-up");
+    box.replaceChildren();
+    snap.docs.forEach(function (d) {
+      var x = d.data() || {};
+      if (!x.assetId || !/^[0-9a-f]{32}$/.test(String(x.assetId))) return;
+      var f = el("figure", "shot");
+      var img = el("img"); img.src = "/_blob/" + x.assetId; img.alt = x.caption ? String(x.caption) : "Venue photo"; img.loading = "lazy";
+      f.appendChild(img);
+      var cap = el("figcaption");
+      cap.appendChild(el("b", null, x.caption ? String(x.caption) : "Venue photo"));
+      if (ctx.isAdmin) {
+        var rm = el("button", "mini rm", "Remove photo"); rm.type = "button";
+        var armed = false;
+        rm.addEventListener("click", function () {
+          if (!armed) { armed = true; rm.textContent = "Tap again to remove"; return; }
+          rm.disabled = true;
+          ctx.db.doc("gallery/" + d.id).delete().then(function () {
+            return ctx.assets ? ctx.assets.delete(x.assetId) : null;
+          }).catch(function () { toast("Could not remove the photo."); rm.disabled = false; });
+        });
+        cap.appendChild(rm);
+      }
+      f.appendChild(cap);
+      box.appendChild(f);
+    });
+  }
+  function startUploader() {
+    $("uploader").hidden = false;
+    $("up-btn").addEventListener("click", async function () {
+      var files = $("up-files").files, note = $("up-note");
+      if (!files || !files.length) { note.textContent = "Choose one or more photos first."; return; }
+      var caption = val("up-caption");
+      var btn = $("up-btn"); btn.disabled = true;
+      var ok = 0, bad = 0;
+      for (var i = 0; i < files.length; i++) {
+        note.textContent = "Uploading " + (i + 1) + " of " + files.length + "…";
+        try {
+          var res = await ctx.assets.upload(files[i]);
+          await ctx.db.collection("gallery").add({ assetId: res.id, caption: caption, createdAt: new Date().toISOString() });
+          ok++;
+        } catch (ex) { bad++; }
+      }
+      btn.disabled = false;
+      $("up-files").value = "";
+      note.textContent = ok + " uploaded" + (bad ? ", " + bad + " failed (use JPG, PNG or WebP under 20 MB)" : "") + ".";
+    });
+  }
+
+  /* ---------- start ---------- */
+  async function init() {
+    var use = window.claude && window.claude.use ? window.claude.use.bind(window.claude) : null;
+    if (!use) return;
+    try { ctx.user = await use("user"); } catch (e) {}
+    try { ctx.db = await use("db"); } catch (e) {}
+    if (!ctx.db) return;
+    if (ctx.user) {
+      try { ctx.uid = await ctx.user.id(); } catch (e) {}
+      try { ctx.isAdmin = !!(await ctx.user.canEdit()); } catch (e) {}
+      var cw = null;
+      try { cw = await ctx.user.can("data.write"); } catch (e) {}
+      ctx.canWrite = !!ctx.uid && cw !== false;
+    }
+    if (ctx.canWrite) {
+      $("via-site-wrap").hidden = false;
+      $("via-note").textContent = "Pick one or both. WhatsApp opens a message with your details filled in. The website inbox saves them for our team straight away.";
+    }
+    try {
+      ctx.db.collection("gallery").orderBy("createdAt", "desc").limit(60).onSnapshot(renderGallery, function () {});
+    } catch (e) {}
+    if (ctx.isAdmin) {
+      try { ctx.assets = await use("assets"); } catch (e) {}
+      startInbox();
+    }
+  }
+  init();
+})();
+</script>
+</body>
+</html>
